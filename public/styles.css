@@ -18,10 +18,6 @@
   text-decoration: none;
 }
 
-html {
-  position: relative;
-}
-
 body {
   font-family: "Barlow Condensed";
   padding: 38px 32px;
@@ -33,8 +29,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  max-width: 1100px;
-  margin: 0 auto;
+  position: relative;
 }
 
 header {
@@ -69,10 +64,6 @@ header #hamburger {
 
 header #hamburger.close {
   background-image: url(./images/icon-close.svg);
-}
-
-#desktop-nav {
-  display: none;
 }
 
 #mobile-nav {
@@ -131,34 +122,9 @@ main figure {
 main figure img {
   height: 244px;
   display: block;
-  margin: 0 auto;
 }
 
 main figure::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 426px;
-  width: 50%;
-  background: var(--lightgrayishblue);
-  border-radius: 0 0 0 64px;
-  z-index: -1;
-}
-
-main .illustration {
-  height: 426px;
-  width: 100%;
-}
-
-main .illustration img {
-  position: absolute;
-  right: -140px;
-  top: 120px;
-  height: 244px;
-}
-
-main .illustration::before {
   content: "";
   position: absolute;
   top: 0;
@@ -276,49 +242,5 @@ footer .attribution a {
 
 .hidden {
   display: none;
-}
-
-@media (min-width: 800px) {
-  #desktop-nav {
-    display: block;
-  }
-  #desktop-nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  #desktop-nav ul li {
-    margin-left: 42px;
-    color: var(--grayishblue);
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
-  #desktop-nav ul li a {
-    color: var(--verydarkblue);
-  }
-  #desktop-nav ul li a:hover {
-    text-decoration: underline;
-  }
-  #desktop-nav ul li.login a {
-    color: var(--grayishblue);
-  }
-  #hamburger {
-    display: none;
-  }
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
 }
 /*# sourceMappingURL=styles.css.map */
