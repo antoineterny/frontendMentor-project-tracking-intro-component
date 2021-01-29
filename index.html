@@ -1,94 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-		<title>Frontend Mentor | Project tracking intro component</title>
+    <title>Frontend Mentor | Project tracking intro component</title>
 
-		<link rel="stylesheet" href="normalize.css" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="./styles.css" />
-	</head>
-	<body id="body">
-		<div class="container">
-			<header>
-				<h1 class="logo">Project tracking</h1>
-				<nav id="desktop-nav">
-					<ul>
-						<li><a href="#">Product</a></li>
-						<li><a href="#">Features</a></li>
-						<li><a href="#">Pricing</a></li>
-						<li>•</li>
-						<li class="login"><a href="#">Login</a></li>
-					</ul>
-				</nav>
-				<nav id="mobile-nav" class="hidden">
-					<ul>
-						<li><a href="#">Product</a></li>
-						<li><a href="#">Features</a></li>
-						<li><a href="#">Pricing</a></li>
-						<hr />
-						<li class="login"><a href="#">Login</a></li>
-					</ul>
-				</nav>
-				<div id="hamburger"></div>
-			</header>
-			<main>
-				<!-- <figure>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="body">
+    <div class="container">
+      <header>
+        <h1 class="logo">Project tracking</h1>
+        <nav id="desktop-nav">
+          <ul>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li>•</li>
+            <li class="login"><a href="#">Login</a></li>
+          </ul>
+        </nav>
+        <nav id="mobile-nav" class="hidden">
+          <ul>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <hr />
+            <li class="login"><a href="#">Login</a></li>
+          </ul>
+        </nav>
+        <div id="hamburger"></div>
+      </header>
+      <main>
+        <!-- <figure>
           <img src="./images/illustration-devices.svg" alt="" />
         </figure> -->
-				<div class="illustration">
-					<img src="./images/illustration-devices.svg" alt="" />
-				</div>
-				<section>
-					<h3><span>New</span>Monograph Dashboard</h3>
-					<h2>Powerful insights into your team</h2>
-					<p>Project planning and time tracking for agile teams</p>
-					<div class="preview">
-						<a href="#">Schedule a demo</a>
-						to see a preview
-					</div>
-				</section>
-			</main>
-		</div>
+        <div class="illustration">
+          <img src="./images/illustration-devices.svg" alt="" />
+        </div>
+        <section>
+          <h3><span>New</span>Monograph Dashboard</h3>
+          <h2>Powerful insights<br />into your team</h2>
+          <p>Project planning and time tracking for agile teams</p>
+          <div class="preview">
+            <a href="#">Schedule a demo</a>
+            to see a preview
+          </div>
+        </section>
+      </main>
+    </div>
 
-		<footer>
-			<p class="attribution">
-				Challenge by
-				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-					>Frontend Mentor</a
-				>. Coded by <a href="#">Antoine Terny</a>.
-			</p>
-		</footer>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Antoine Terny</a>.
+      </p>
+    </footer>
 
-		<script>
-			const body = document.getElementById("body")
-			const hamburger = document.getElementById("hamburger")
-			const mobileNav = document.getElementById("mobile-nav")
-			hamburger.onclick = () => {
-				mobileNav.classList.toggle("hidden")
-				hamburger.classList.toggle("close")
-			}
-			const closeMenu = e => {
-				if (!hamburger.contains(e.target)) {
-					mobileNav.classList.add("hidden")
-					hamburger.classList.remove("close")
-				}
-			}
-			body.addEventListener("click", closeMenu)
-		</script>
-	</body>
+    <script>
+      const body = document.getElementById("body")
+      const hamburger = document.getElementById("hamburger")
+      const mobileNav = document.getElementById("mobile-nav")
+      hamburger.onclick = () => {
+        mobileNav.classList.toggle("hidden")
+        hamburger.classList.toggle("close")
+      }
+      const closeMenu = e => {
+        if (!hamburger.contains(e.target)) {
+          mobileNav.classList.add("hidden")
+          hamburger.classList.remove("close")
+        }
+      }
+      body.addEventListener("click", closeMenu)
+    </script>
+  </body>
 </html>
